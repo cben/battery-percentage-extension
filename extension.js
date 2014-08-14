@@ -18,7 +18,7 @@ function getPower() {
 
 function _onPowerChanged() {
     if (this._proxy.IsPresent) {
-        percentageText.set_text("%d%%".format(this._proxy.Percentage));
+        percentageText.set_text("%d%%".format(this._proxy.GetPrimaryDeviceSync()[0][3]));
         percentageText.show();
     } else {
         percentageText.hide();
